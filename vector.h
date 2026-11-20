@@ -14,7 +14,6 @@ public:
 	explicit Vector(const Alloc& alloc);
 	~Vector();
 	
-	// TODO: implement rule of 5(copy and move operations).
 	Vector(const Vector& other);
 	Vector& operator=(const Vector& other);
 

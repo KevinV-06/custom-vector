@@ -163,3 +163,32 @@ const T& Vector<T, Alloc>::operator[](std::size_t index) const {
 	return data_[index];
 }
 
+template <typename T, typename Alloc>
+typename Vector<T, Alloc>::iterator Vector<T, Alloc>::begin() noexcept{
+	return data_;
+}
+
+template <typename T, typename Alloc>
+typename Vector<T, Alloc>::iterator Vector<T, Alloc>::end() noexcept {
+	return data_ + size_;
+}
+
+template <typename T, typename Alloc>
+typename Vector<T, Alloc>::const_iterator Vector<T, Alloc>::begin() const noexcept {
+	return data_;
+}
+
+template <typename T, typename Alloc>
+typename Vector<T, Alloc>::const_iterator Vector<T, Alloc>::end() const noexcept {
+	return data_ + size_;
+}
+
+template <typename T, typename Alloc>
+typename Vector<T, Alloc>::const_iterator Vector<T, Alloc>::cbegin() const noexcept {
+	return begin();
+}
+
+template <typename T, typename Alloc>
+typename Vector<T, Alloc>::const_iterator Vector<T, Alloc>::cend() const noexcept {
+	return end();
+}
